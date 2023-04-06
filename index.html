@@ -13,9 +13,11 @@
             color: rgb(129, 100, 62);
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-        div{
+        #div1{
             margin-left: auto;
             margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
             background-color: rgb(218, 189, 153);
             width: 400px;
             height: 450px;
@@ -29,9 +31,9 @@
     </style>
 </head>
 <body>
-    <div>
-        <img id="foto" src="IMG_1473.jpg" alt="some text" width=200 height=270>
-
+    <div id="div1">
+        <div id="div2"><img id="foto" src="IMG_1473.jpg" alt="some text" width=200 height=225>
+        </div>
     <script>
         var nome= prompt('Digite seu nome.')
         document.write(`<br/>Olá, <strong>${nome}</strong>! <br/> Aprendi a <i>hospedar</i> um site.<br/> Gostou?<br/>`)
