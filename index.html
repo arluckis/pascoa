@@ -9,14 +9,28 @@
         body{
             font-size: 16pt;
             text-align: center;
-            background-color: bisque;
+            background-color: rgb(122, 101, 72);
             color: rgb(129, 100, 62);
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        div{
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(218, 189, 153);
+            width: 400px;
+            height: 450px;
+            border-radius: 3%;
+        }
+
+        #foto{
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
-    <img src="IMG_1473.jpg" alt="some text" width=400 height=550>
+    <div>
+        <img id="foto" src="IMG_1473.jpg" alt="some text" width=200 height=270>
 
     <script>
         var nome= prompt('Digite seu nome.')
@@ -24,5 +38,6 @@
     </script>
     <input type="button">Sim.</input>
     <input type="button">Não.</input>
+</div>
 </body>
 </html>
