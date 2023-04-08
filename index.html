@@ -19,14 +19,15 @@
             margin-top: auto;
             margin-bottom: auto;
             background-color: rgb(218, 189, 153);
-            width: 320px;
-            height: 390px;
-            border-radius: 5%;
+            width: 520px;
+            height: 440px;
+            border-radius: 50%;
         }
 
         #foto{
             margin-left: auto;
             margin-right: auto;
+            margin-top: 20pt;
         }
 
         #foto2{
@@ -47,18 +48,47 @@
             height: 150px;
             border-radius: 50%;
         }
+
+        #botao{
+            background-color: #976c33;
+            color: bisque;
+            width: 200px;
+            height: 33px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #cf9345;
+        }
+        
     </style>
 </head>
 <body>
 <div id="div1">
         <img id="foto" src="12.png" alt="some text" width=200 height=200>
-    <script>
-        var nome= prompt('Digite seu nome.')
-        document.write(`<br/>Olá, <strong>${nome}</strong>! <br/> Aprendi a <i>hospedar</i> um site.<br/> Gostou?<br/>`)
-    </script>
-    <input type="button">Sim.</input>
-    <input type="button">Não.</input>
-</div>
+        <p id="paragrafo">Olá, <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui."><div id="botao">Enviar</div></p>
+<script>
+    var paragrafo = document.querySelector('#paragrafo')
+    var botao = document.querySelector('#botao')
+    botao.addEventListener('click', enviar)
+    botao.addEventListener('mouseenter', enter)
+    botao.addEventListener('mouseout', sair)
+
+    function enter(){
+        botao.style.background = '#cf9345'
+    }
+    function sair(){
+        botao.style.background = '#976c33'
+    }
+
+    function enviar(){
+        var nome = document.querySelector('#nome').value
+        paragrafo.innerHTML = `Olá, ${nome}!`
+        botao.hidden=true
+        nome.hidden=true
+    }
+
+
+</script>
+
 
     
 <div id="div2"> 
